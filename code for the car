@@ -1,0 +1,45 @@
+#define MOTOR1_A 12  // Direction pin 1 for motor 1
+#define MOTOR1_B 13  // Direction pin 2 for motor 1
+#define MOTOR2_A 10  // Direction pin 1 for motor 2
+#define MOTOR2_B 11  // Direction pin 2 for motor 2
+#define MOTOR3_A 7   // Direction pin 1 for motor 3
+#define MOTOR3_B 8   // Direction pin 2 for motor 3
+#define MOTOR4_A 4   // Direction pin 1 for motor 4
+#define MOTOR4_B 9   // Direction pin 2 for motor 4
+
+void setup() {
+  pinMode(MOTOR1_A, OUTPUT);
+  pinMode(MOTOR1_B, OUTPUT);
+  pinMode(MOTOR2_A, OUTPUT);
+  pinMode(MOTOR2_B, OUTPUT);
+  pinMode(MOTOR3_A, OUTPUT);
+  pinMode(MOTOR3_B, OUTPUT);
+  pinMode(MOTOR4_A, OUTPUT);
+  pinMode(MOTOR4_B, OUTPUT);
+}
+
+void loop() {
+  // Drive all motors forward
+  digitalWrite(MOTOR1_A, HIGH);
+  digitalWrite(MOTOR1_B, LOW);
+  digitalWrite(MOTOR2_A, HIGH);
+  digitalWrite(MOTOR2_B, LOW);
+  digitalWrite(MOTOR3_A, HIGH);
+  digitalWrite(MOTOR3_B, LOW);
+  digitalWrite(MOTOR4_A, HIGH);
+  digitalWrite(MOTOR4_B, LOW);
+
+  delay(2000);  // Run for 2 seconds
+
+  // Drive all motors in reverse
+  digitalWrite(MOTOR1_A, LOW);
+  digitalWrite(MOTOR1_B, HIGH);
+  digitalWrite(MOTOR2_A, LOW);
+  digitalWrite(MOTOR2_B, HIGH);
+  digitalWrite(MOTOR3_A, LOW);
+  digitalWrite(MOTOR3_B, HIGH);
+  digitalWrite(MOTOR4_A, LOW);
+  digitalWrite(MOTOR4_B, HIGH);
+
+  delay(2000);  // Run for 2 seconds
+}
